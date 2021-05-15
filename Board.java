@@ -95,14 +95,14 @@ public class Board {
     public boolean isWinningCol(String symbol) {
         // checks if any column has 3 of the specified symbol
         return  (board[0][0].equals(symbol) && board[1][0].equals(symbol) && board[2][0].equals(symbol))||
-                (board[1][0].equals(symbol) && board[1][1].equals(symbol) && board[1][2].equals(symbol))||
-                (board[2][0].equals(symbol) && board[2][1].equals(symbol) && board[2][2].equals(symbol));
+                (board[0][1].equals(symbol) && board[1][1].equals(symbol) && board[2][1].equals(symbol))||
+                (board[0][2].equals(symbol) && board[1][2].equals(symbol) && board[2][2].equals(symbol));
     }
 
     // isWinningRow
     public boolean isWinningRow(String symbol) {
         // checks if any of the rows has 3 of the specified symbol
-        return  (board[0][0].equals(symbol) && board[0][1].equals(symbol) && board[0][2].equals(symbol))||
+        return (board[0][0].equals(symbol) && board[0][1].equals(symbol) && board[0][2].equals(symbol))||
                 (board[1][0].equals(symbol) && board[1][1].equals(symbol) && board[1][2].equals(symbol))||
                 (board[2][0].equals(symbol) && board[2][1].equals(symbol) && board[2][2].equals(symbol));
     }
